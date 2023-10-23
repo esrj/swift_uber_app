@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="thC-YN-NG6">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Rider View Controller-->
+        <scene sceneID="BDA-Ry-Ocm">
+            <objects>
+                <viewController id="pW3-Hm-0w6" customClass="RiderViewController" customModule="proj1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7rn-3T-1Bg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hD7-xa-3EY">
+                                <rect key="frame" x="0.0" y="103" width="393" height="685"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mkE-eK-llA">
+                                <rect key="frame" x="0.0" y="788" width="393" height="64"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Call an uber">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="callAnUber:" destination="pW3-Hm-0w6" eventType="touchUpInside" id="vCt-wd-frR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ei4-jm-Q5r"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mkE-eK-llA" firstAttribute="leading" secondItem="Ei4-jm-Q5r" secondAttribute="leading" id="6ks-wt-OCV"/>
+                            <constraint firstItem="hD7-xa-3EY" firstAttribute="leading" secondItem="Ei4-jm-Q5r" secondAttribute="leading" id="M8H-6G-v9C"/>
+                            <constraint firstItem="hD7-xa-3EY" firstAttribute="trailing" secondItem="Ei4-jm-Q5r" secondAttribute="trailing" id="WUB-Sw-Cf2"/>
+                            <constraint firstItem="mkE-eK-llA" firstAttribute="trailing" secondItem="Ei4-jm-Q5r" secondAttribute="trailing" id="az5-U2-zTu"/>
+                            <constraint firstAttribute="bottom" secondItem="mkE-eK-llA" secondAttribute="bottom" id="fd3-PG-xbZ"/>
+                            <constraint firstItem="hD7-xa-3EY" firstAttribute="top" secondItem="Ei4-jm-Q5r" secondAttribute="top" id="pBB-pl-Kxg"/>
+                            <constraint firstItem="Ei4-jm-Q5r" firstAttribute="bottom" secondItem="hD7-xa-3EY" secondAttribute="bottom" constant="30" id="w4i-qY-X50"/>
+                            <constraint firstItem="mkE-eK-llA" firstAttribute="top" secondItem="hD7-xa-3EY" secondAttribute="bottom" id="yhg-rJ-jNs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="AQ3-aM-LAr">
+                        <barButtonItem key="leftBarButtonItem" title="Log out" id="8o3-fY-MGH">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="logout:" destination="pW3-Hm-0w6" id="P7t-R4-b07"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="callUberButton" destination="mkE-eK-llA" id="Scr-3i-Rz7"/>
+                        <outlet property="mapView" destination="hD7-xa-3EY" id="D6D-9e-7Nz"/>
+                        <segue destination="rSz-iE-IgB" kind="presentation" identifier="riderBackToLoginView" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="cgb-4K-eak"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bGd-WR-JB9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2768.7022900763359" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BIO-uU-Oog">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="thC-YN-NG6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aAA-Hv-WJ3">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pW3-Hm-0w6" kind="relationship" relationship="rootViewController" id="1XM-Pz-FEs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vtI-iJ-7Ds" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1924" y="4"/>
+        </scene>
+        <!--UIViewController-BYZ-38-t0r-->
+        <scene sceneID="vNS-Qb-O0y">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="UIViewController-BYZ-38-t0r" id="rSz-iE-IgB" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aXl-lO-Yg2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2768" y="529"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

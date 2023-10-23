@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>645079380484-itoirq4b01nceveha5fimomnoje7aihq.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.645079380484-itoirq4b01nceveha5fimomnoje7aihq</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBI64XnIsKyym7mPQQR4JtCMNUW1B2zb54</string>
+	<key>GCM_SENDER_ID</key>
+	<string>645079380484</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>wenhong.proj1</string>
+	<key>PROJECT_ID</key>
+	<string>proj1-cb198</string>
+	<key>STORAGE_BUCKET</key>
+	<string>proj1-cb198.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:645079380484:ios:b168cecae28a9a23d73b51</string>
+	<key>DATABASE_URL</key>
+	<string>https://proj1-cb198-default-rtdb.asia-southeast1.firebasedatabase.app</string>
+</dict>
+</plist>
